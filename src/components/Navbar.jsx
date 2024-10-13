@@ -1,7 +1,8 @@
+import { Menubar } from "./component/menubar";
 
 const Navbar = () => {
     return (
-        <div className="px-12 pt-[13px] pb-4  ">
+        <div className="px-12 pt-[13px] pb-4  h-[130px] flex flex-col justify-between">
             <div className=" justify-between pt-0 pb-3 hidden lg:flex border-b-[1px] border-[#f5f5f5]">
                 <div className="flex gap-5 font-semibold h-4 leading-none text-[#323232] text-[14px]">
 
@@ -21,7 +22,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div>
-
+                <Menubar></Menubar>
             </div>
         </div>
     );

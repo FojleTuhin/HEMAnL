@@ -1,4 +1,4 @@
-import Discount from "../components/Discount";
+// import Discount from "../components/Discount";
 import Navbar from "../components/Navbar";
 // import { FaGreaterThan } from "react-icons/fa";
 // import img from "../../public/graterthen.png"
@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 const Home = () => {
     return (
         <div>
-            <Discount />
+            {/* <Discount /> */}
             <div className='max-w-7xl mx-auto'>
                 <Navbar />
             </div>
