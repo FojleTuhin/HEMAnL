@@ -19,51 +19,17 @@ import { FaRegHeart } from "react-icons/fa";
 export function Menubar() {
   return (
     (<div
-      className="flex items-center w-full h-14 bg-white">
-      {/* <Link href="#" className="flex w-full items-center gap-[43px] text-[#323232]" prefetch={false}>
-        <img src={logo} alt="" className="h-14 w-14 rounded-[2px]" />
-        <CategoriesDropdown />
+      className=" w-full h-14 bg-white">
 
 
-
-
-
-
-        <div className="h-11 px-6 py-3 bg-[#efefef] rounded-full flex items-center justify-between  leading-none">
-          <p className="text-[16px] text-[#767676]">What are you looking for? </p>
-          <RiSearchLine className="font-bold text-[20px] text-black" />
-        </div>
-
-
-
-
-
-        <div className="flex items-center gap-2 float-end">
-          <div className="flex gap-[6px] rounded-[6px] hover:bg-[#efefef] py-[10px] px-3 items-center text-[#323232] h-10 leading-none transition-colors duration-300">
-            <img src={head} className="h-7 w-7" alt="" />
-            <p className="leading-none font-semibold">log in</p>
-          </div>
-
-          <div className="flex items-center gap-[5px]">
-            <p className="h-12 w-12 flex items-center justify-center rounded-[6px] hover:bg-[#efefef] transition-colors duration-300"><FaRegHeart className="h-5 w-5" /></p>
-            <div className="h-12 w-12 flex items-center justify-center rounded-[6px] hover:bg-[#efefef] transition-colors duration-300">
-              <img src={cart} alt="" className="h-14 w-14" />
-            </div>
-
-          </div>
-
-        </div>
-
-      </Link> */}
-
-      <Link href="#" className="flex w-full items-center justify-between gap-[43px] text-[#323232]" prefetch={false}>
+      <Link href="#" className="lg:flex hidden w-full items-center justify-between gap-[43px] text-[#323232]" prefetch={false}>
         {/* Left Section */}
         <div className="flex items-center gap-[43px]">
           <img src={logo} alt="" className="h-14 w-14 rounded-[2px]" />
           <CategoriesDropdown />
         </div>
 
-        {/* Search Bar - Flexible Width */}
+        {/* Search Bar */}
         <div className="h-11 px-6 py-3 bg-[#efefef] rounded-full flex items-center justify-between flex-grow basis-0 leading-none">
           <p className="text-[16px] text-[#767676]">what are you looking for?</p>
           <RiSearchLine className="font-bold text-[20px] text-black" />
@@ -89,48 +55,93 @@ export function Menubar() {
 
 
 
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="lg:hidden">
-            <MenuIcon className="h-6 w-6" />
-            <span className="sr-only">Toggle navigation menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left">
-          <div className="grid w-[200px] p-4">
-            <Link
-              href="#"
-              className="text-lg font-medium hover:underline underline-offset-4"
-              prefetch={false}>
-              Home
-            </Link>
-            <Link
-              href="#"
-              className="text-lg font-medium hover:underline underline-offset-4"
-              prefetch={false}>
-              About
-            </Link>
-            <Link
-              href="#"
-              className="text-lg font-medium hover:underline underline-offset-4"
-              prefetch={false}>
-              Services
-            </Link>
-            <Link
-              href="#"
-              className="text-lg font-medium hover:underline underline-offset-4"
-              prefetch={false}>
-              Portfolio
-            </Link>
-            <Link
-              href="#"
-              className="text-lg font-medium hover:underline underline-offset-4"
-              prefetch={false}>
-              Contact
-            </Link>
+
+
+
+
+
+
+      <div className="flex gap-2 lg:hidden items-center">
+        <Link href="#" className="flex w-full items-center justify-between gap-[43px] text-[#323232]" prefetch={false}>
+          {/* Left Section */}
+          <div className="flex items-center gap-[43px]">
+            <img src={logo} alt="" className="h-14 w-14 rounded-[2px]" />
+
           </div>
-        </SheetContent>
-      </Sheet>
+
+          {/* Search Bar */}
+          <div className="h-11 px-6 py-3 bg-[#efefef] hidden md:flex rounded-full  items-center justify-between flex-grow basis-0 leading-none">
+            <p className="text-[16px] text-[#767676]">what are you looking for?</p>
+            <RiSearchLine className="font-bold text-[20px] text-black" />
+          </div>
+
+          {/* Right Section */}
+          <div className="flex items-center gap-2">
+            <div className="flex gap-[6px] rounded-[6px] hover:bg-[#efefef] py-[10px] px-3 items-center text-[#323232] h-10 leading-none transition-colors duration-300">
+              <img src={head} className="h-7 w-7" alt="" />
+              <p className="leading-none font-semibold hidden md:block">log in</p>
+            </div>
+
+            <div className="flex items-center gap-[5px]">
+              <p className="h-12 w-12 flex items-center justify-center rounded-[6px] hover:bg-[#efefef] transition-colors duration-300">
+                <FaRegHeart className="h-5 w-5" />
+              </p>
+              <div className="h-12 w-12 flex items-center justify-center rounded-[6px] hover:bg-[#efefef] transition-colors duration-300">
+                <img src={cart} alt="" className="h-14 w-14" />
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </Link>
+        <Sheet >
+
+          <SheetTrigger asChild>
+            <Button variant="outline" size="icon" className="lg:hidden h-12 w-12 border-0 shadow-none">
+
+              <MenuIcon className="h-6 w-6 " />
+              <span className="sr-only">Toggle navigation menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="left">
+            <div className="grid w-[200px] p-4">
+              <Link
+                href="#"
+                className="text-lg font-medium hover:underline underline-offset-4"
+                prefetch={false}>
+                Home
+              </Link>
+              <Link
+                href="#"
+                className="text-lg font-medium hover:underline underline-offset-4"
+                prefetch={false}>
+                About
+              </Link>
+              <Link
+                href="#"
+                className="text-lg font-medium hover:underline underline-offset-4"
+                prefetch={false}>
+                Services
+              </Link>
+              <Link
+                href="#"
+                className="text-lg font-medium hover:underline underline-offset-4"
+                prefetch={false}>
+                Portfolio
+              </Link>
+              <Link
+                href="#"
+                className="text-lg font-medium hover:underline underline-offset-4"
+                prefetch={false}>
+                Contact
+              </Link>
+            </div>
+          </SheetContent>
+        </Sheet>
+
+      </div>
     </div>)
   );
 }
