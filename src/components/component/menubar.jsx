@@ -19,8 +19,10 @@ import { FaRegHeart } from "react-icons/fa";
 export function Menubar() {
   return (
     (<div
-      className=" w-full h-14 bg-white">
+      className=" w-full lg:h-14 md:h-12 bg-white">
 
+
+      {/* for large screen */}
 
       <Link href="#" className="lg:flex hidden w-full items-center justify-between gap-[43px] text-[#323232]" prefetch={false}>
         {/* Left Section */}
@@ -30,10 +32,12 @@ export function Menubar() {
         </div>
 
         {/* Search Bar */}
-        <div className="h-11 px-6 py-3 bg-[#efefef] rounded-full flex items-center justify-between flex-grow basis-0 leading-none">
-          <p className="text-[16px] text-[#767676]">what are you looking for?</p>
-          <RiSearchLine className="font-bold text-[20px] text-black" />
-        </div>
+       
+          <div className="h-11  lg:mx-[10px] px-6 py-3 bg-[#efefef] hover:bg-[#dfdfdf] transition duration-300 rounded-full flex items-center justify-between flex-grow basis-0 leading-none">
+            <p className="text-[16px] text-[#767676]">what are you looking for?</p>
+            <RiSearchLine className="font-bold text-[20px] text-black" />
+          </div>
+       
 
         {/* Right Section */}
         <div className="flex items-center gap-2">
@@ -65,12 +69,12 @@ export function Menubar() {
         <Link href="#" className="flex w-full items-center justify-between gap-[43px] text-[#323232]" prefetch={false}>
           {/* Left Section */}
           <div className="flex items-center gap-[43px]">
-            <img src={logo} alt="" className="h-14 w-14 rounded-[2px]" />
+            <img src={logo} alt="" className="h-12 w-12 rounded-[2px]" />
 
           </div>
 
           {/* Search Bar */}
-          <div className="h-11 px-6 py-3 bg-[#efefef] hidden md:flex rounded-full  items-center justify-between flex-grow basis-0 leading-none">
+          <div className="h-11 px-6 py-3 md:mx-[14px] bg-[#efefef] hidden md:flex rounded-full  items-center justify-between flex-grow basis-0 leading-none">
             <p className="text-[16px] text-[#767676]">what are you looking for?</p>
             <RiSearchLine className="font-bold text-[20px] text-black" />
           </div>
