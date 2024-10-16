@@ -52,31 +52,30 @@ const SheetContent = React.forwardRef(({ side = "right", className, children, ..
     <SheetPrimitive.Content ref={ref} className={cn(sheetVariants({ side }), className)} {...props}>
 
       <div className="px-4 py-3 flex justify-between w-full items-center gap-[43px]">
-
+        {/* Logo Section */}
         <div className="flex items-center gap-[43px]">
-          <img src={logo} alt="" className="h-12 w-12 rounded-[2px]" />
-
+          <img src={logo} alt="logo" className="h-12 w-12 rounded-[2px]" />
         </div>
+
         {/* Search Bar */}
-        <div className="h-11 px-6 py-3 md:mx-[14px] bg-[#efefef] flex rounded-full  items-center justify-between flex-grow basis-0 leading-none">
-          <p className="text-[16px] text-[#767676]">what are you looking for?</p>
+        <div className="flex-grow max-w-[500px] flex items-center justify-between h-11 px-6 py-3 bg-[#efefef] rounded-full overflow-hidden">
+          <p className="text-[16px] text-[#767676] whitespace-nowrap overflow-hidden text-ellipsis">
+            what are you looking for?
+          </p>
           <RiSearchLine className="font-bold text-[20px] text-black" />
         </div>
 
-
+        {/* Close Button */}
         <SheetPrimitive.Close
-          className="  ring-offset-background transition-opacity hover:opacity-100  disabled:pointer-events-none data-[state=open]:bg-secondary">
-          {/* <ImCross className="h-[14px] w-[14px] font-bold"/> */}
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-[24px] w-[24px]" fill="none" viewBox="0 0 24 24" stroke="black" stroke-width="3">
-            <path stroke-linecap="round" d="M6 18L18 6M6 6l12 12" />
+          className="ring-offset-background transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-secondary"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-[24px] w-[24px]" fill="none" viewBox="0 0 24 24" stroke="black" strokeWidth="3">
+            <path strokeLinecap="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
-
-
-          {/* <Cross2Icon className="h-4 w-4 font-bold" /> */}
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
-
       </div>
+
 
       {children}
     </SheetPrimitive.Content>
