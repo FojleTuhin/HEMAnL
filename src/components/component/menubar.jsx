@@ -109,7 +109,7 @@ export function Menubar() {
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="left">
+          <SheetContent side="right" >
             <div className="grid w-[200px] p-4">
               <Link
                 href="#"

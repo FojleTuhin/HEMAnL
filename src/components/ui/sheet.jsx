@@ -1,9 +1,12 @@
 import * as React from "react"
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { Cross2Icon } from "@radix-ui/react-icons"
+import { ImCross } from "react-icons/im";
+import logo from "../../../public/logo.svg"
 import { cva } from "class-variance-authority";
 
 import { cn } from "@/lib/utils"
+import { RiSearchLine } from "react-icons/ri";
 
 const Sheet = SheetPrimitive.Root
 
@@ -16,7 +19,7 @@ const SheetPortal = SheetPrimitive.Portal
 const SheetOverlay = React.forwardRef(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
     className={cn(
-      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 ",
       className
     )}
     {...props}
@@ -25,16 +28,16 @@ const SheetOverlay = React.forwardRef(({ className, ...props }, ref) => (
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
 const sheetVariants = cva(
-  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500 data-[state=open]:animate-in data-[state=closed]:animate-out",
+  "fixed z-50 gap-4 bg-background shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500 data-[state=open]:animate-in data-[state=closed]:animate-out",
   {
     variants: {
       side: {
         top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
         bottom:
           "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
-        left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
+        left: "inset-y-0 left-0 h-full w-full border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left ",
         right:
-          "inset-y-0 right-0 h-full w-3/4 border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm",
+          "inset-y-0 right-0 h-full w-full border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right ",
       },
     },
     defaultVariants: {
@@ -47,11 +50,34 @@ const SheetContent = React.forwardRef(({ side = "right", className, children, ..
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content ref={ref} className={cn(sheetVariants({ side }), className)} {...props}>
-      <SheetPrimitive.Close
-        className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
-        <Cross2Icon className="h-4 w-4" />
-        <span className="sr-only">Close</span>
-      </SheetPrimitive.Close>
+
+      <div className="px-4 py-3 flex justify-between w-full items-center gap-[43px]">
+
+        <div className="flex items-center gap-[43px]">
+          <img src={logo} alt="" className="h-12 w-12 rounded-[2px]" />
+
+        </div>
+        {/* Search Bar */}
+        <div className="h-11 px-6 py-3 md:mx-[14px] bg-[#efefef] flex rounded-full  items-center justify-between flex-grow basis-0 leading-none">
+          <p className="text-[16px] text-[#767676]">what are you looking for?</p>
+          <RiSearchLine className="font-bold text-[20px] text-black" />
+        </div>
+
+
+        <SheetPrimitive.Close
+          className="  ring-offset-background transition-opacity hover:opacity-100  disabled:pointer-events-none data-[state=open]:bg-secondary">
+          {/* <ImCross className="h-[14px] w-[14px] font-bold"/> */}
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-[24px] w-[24px]" fill="none" viewBox="0 0 24 24" stroke="black" stroke-width="3">
+            <path stroke-linecap="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+
+
+          {/* <Cross2Icon className="h-4 w-4 font-bold" /> */}
+          <span className="sr-only">Close</span>
+        </SheetPrimitive.Close>
+
+      </div>
+
       {children}
     </SheetPrimitive.Content>
   </SheetPortal>
