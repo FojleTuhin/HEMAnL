@@ -19,12 +19,12 @@ import { FaRegHeart } from "react-icons/fa";
 export function Menubar() {
   return (
     (<div
-      className=" w-full lg:h-14 md:h-12 bg-white">
+      className=" w-full   lg:h-14 md:h-12 bg-white ">
 
 
       {/* for large screen */}
 
-      <Link href="#" className="lg:flex hidden w-full items-center justify-between gap-[43px] text-[#323232]" prefetch={false}>
+      <Link href="#" className="lg:flex  hidden w-full items-center justify-between gap-[43px] text-[#323232]" prefetch={false}>
         {/* Left Section */}
         <div className="flex items-center gap-[43px]">
           <img src={logo} alt="" className="h-14 w-14 rounded-[2px]" />
