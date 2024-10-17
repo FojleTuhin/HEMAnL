@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Santa Claus",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dwfd645da4/home/header-navigatie/HEMA-2024-categoryslider-280x280-wk40-sint-algemeen.jpg",
+        "subcategories": ["Santa Claus", "Christmas gifts", "Santa costumes", "holiday decor", "ornaments", "greeting cards"]
+    },
+    {
+        "name": "baby",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dw2d5a0a18/home/header-navigatie/HEMA-2024-inspiratie-800x800-wk3738-jassen2.png",
+        "subcategories": ["baby", "everything in baby", "new", "shop by size", "baby clothes", "newborn clothes", "rompers", "care"]
+    },
+    {
+        "name": "child",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dw88bc571e/home/header-navigatie/HEMA-2024-categoryslider-280x280-wk3940-jongenmeisje.jpg",
+        "subcategories": ["child", "everything in child", "boys clothes", "girls clothes", "shoes", "accessories"]
+    },
+    {
+        "name": "ladies",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dw3b53cd47/home/header-navigatie/HEMA-2024-categoryslider-280x280-wk3738-dameskleding.jpg",
+        "subcategories": ["ladies", "dresses", "tops", "skirts", "jeans", "accessories"]
+    },
+    {
+        "name": "Gentlemen",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dwc6e40989/home/header-navigatie/HEMA-2024-categoryslider-280x280-wk3940-kleding.jpg",
+        "subcategories": ["Gentlemen", "shirts", "pants", "suits", "jackets", "shoes"]
+    },
+    {
+        "name": "living and sleeping",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dw6519bbbb/home/header-navigatie/HEMA-2024-categoryslider-280x280-wk41-42-dbo-nieuw.jpg",
+        "subcategories": ["living and sleeping", "furniture", "bedding", "decor", "lighting", "storage"]
+    },
+    {
+        "name": "cake, food and drinks",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dw63ee2eb2/home/catlisters/2024/HEMA-2024-categoryslider-280x280-wk1718-kaletaart.jpg",
+        "subcategories": ["cake, food and drinks", "cakes", "snacks", "drinks", "desserts", "healthy food"]
+    },
+    {
+        "name": "leisure and office",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dw6c77e3e0/home/header-navigatie/HEMA-2023-categoryslider-280x280-wk22-vrije-tijd-1.jpg",
+        "subcategories": ["leisure and office", "office chairs", "desks", "office supplies", "leisure wear", "gadgets"]
+    },
+    {
+        "name": "cooking and dining",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dw91c4e478/home/header-navigatie/HEMA-2024-categoryslider-280x280-keuken.jpg",
+        "subcategories": ["cooking and dining", "kitchenware", "cookware", "tableware", "appliances", "dining furniture"]
+    },
+    {
+        "name": "party and gift",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dw58aac92b/home/header-navigatie/HEMA-2024-categoryslider-280x280-feestcadeau.jpg",
+        "subcategories": ["party and gift", "party supplies", "gifts for him", "gifts for her", "wrapping", "decorations"]
+    },
+    {
+        "name": "beautiful and healthy",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dw5eebf2e4/home/header-navigatie/HEMA-2024-categoryslider-280x280-wk09-makeup.jpg",
+        "subcategories": ["beautiful and healthy", "skincare", "makeup", "wellness", "fitness equipment", "health supplements"]
+    },
+    {
+        "name": "toys",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dwd1bf8bba/home/header-navigatie/HEMA-2024-categoryslider-280x280-wk1718-educatiefspeelgoed.jpg",
+        "subcategories": ["toys", "action figures", "puzzles", "board games", "educational toys", "dolls"]
+    },
+    {
+        "name": "photo service",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dw5269646d/home/header-navigatie/HEMA-2023-categoryslider-280x280-wk24-foto.jpg"
+    },
+    {
+        "name": "friends prices",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dwf18330b9/home/header-navigatie/HEMA-2024-categoryslider-280x280-vriendenprijsjes.jpg"
+    },
+    {
+        "name": "offers and sales",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dwb968d7e3/home/header-navigatie/HEMA-categoryslider-2023-280x280-aanbiedingen.jpg"
+    },
+    {
+        "name": "new",
+        "image": "https://www.hema.nl/on/demandware.static/-/Sites/nl_NL/dwec314776/home/header-navigatie/HEMA-categoryslider-2023-280x280-nieuw.jpg"
+    }
+
+]

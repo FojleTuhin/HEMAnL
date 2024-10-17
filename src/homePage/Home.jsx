@@ -4,6 +4,7 @@ import { RiSearchLine } from "react-icons/ri";
 import Navbar from "../components/Navbar";
 import { Menubar } from "@/components/component/menubar";
 import { useEffect, useState } from "react";
+import CategorySlider from "@/components/CategorySlider";
 
 
 
@@ -34,7 +35,7 @@ const Home = () => {
     return (
         <div>
             {/* <Discount /> */}
-            <div className='max-w-7xl mx-auto relative'>
+            <div className='max-w-7xl mx-auto relative '>
 
 
                 <Navbar />
@@ -53,10 +54,12 @@ const Home = () => {
                     </div>
                 </div>
 
+              <CategorySlider/>
 
 
 
-                <img src="https://www.geeky-gadgets.com/wp-content/uploads/2024/09/how-to-use-Google-translate-in-2024.jpg" alt="" />
+
+                {/* <img src="https://www.geeky-gadgets.com/wp-content/uploads/2024/09/how-to-use-Google-translate-in-2024.jpg" alt="" /> */}
 
 
 
