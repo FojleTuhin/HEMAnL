@@ -15,7 +15,7 @@ const Home = () => {
     useEffect(() => {
         const handleScroll = () => {
             // Detect if the user has scrolled more than 50px down the page
-            if (window.scrollY > 100) {
+            if (window.scrollY > 50) {
                 setIsSticky(true);
             } else {
                 setIsSticky(false);
@@ -35,11 +35,12 @@ const Home = () => {
         <div>
             {/* <Discount /> */}
             <div className='max-w-7xl mx-auto relative'>
+
+
                 <Navbar />
-                <div
-                    className={`sticky top-0 z-50 bg-white transition-all duration-600 ease-out lg:px-12 md:pl-8 md:pr-5 pr-1 pl-4 ${isSticky ? "py-4 shadow-md" : "py-4"
-                        }`}
-                >
+
+                <div className={`sticky top-0 z-50 bg-white transition-all duration-600 ease-out md:pt-[13px] pb-4 lg:px-12 md:pl-8 md:pr-5 pr-1 pl-4 ${isSticky ? "py-4 shadow-md" : "py-4"
+                    }`}>
                     <Menubar />
                 </div>
 

@@ -2,9 +2,8 @@
 
 const Navbar = () => {
     return (
-        <div>
-            <div className="lg:px-12  md:pt-[13px] md:pb-4 md:pl-8 md:pr-5 py-3 pr-1 pl-4  lg:h-74 ">
-                <div className=" justify-between pt-0 pb-3 hidden lg:flex border-b-[1px] border-[#f5f5f5]">
+        
+                <div className=" justify-between pt-0 pb-3 hidden lg:flex border-b-[1px] border-[#f5f5f5] lg:px-12 md:pt-[13px] md:pb-4 md:pl-8 md:pr-5 py-3 pr-1 pl-4  lg:h-74 ">
                     <div className="flex gap-5 font-semibold h-4 leading-none text-[#323232] text-[14px]">
 
                         <p className="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-current after:transition-all after:duration-300 hover:after:w-full"> photo service</p>
@@ -23,10 +22,7 @@ const Navbar = () => {
                     </div>
                 </div>
               
-            </div>
-
-            
-        </div>
+           
     );
 };
 

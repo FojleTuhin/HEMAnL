@@ -11,8 +11,14 @@ import logo from "../../../public/logo.svg"
 import head from "../../../public/head.png"
 import cart from "../../../public/cart.png"
 import CategoriesDropdown from "../CategoriesDropdown";
-import { RiSearchLine } from "react-icons/ri";
+import { RiSearchLine, RiShoppingBag4Line } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa";
+import { MdOutlinePhotoCamera } from "react-icons/md";
+import { HiOutlineTicket } from "react-icons/hi2";
+import { PiCoffee } from "react-icons/pi";
+import { IoLocationOutline } from "react-icons/io5";
+import { IoMdCard } from "react-icons/io";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
 
 
 
@@ -32,12 +38,12 @@ export function Menubar() {
         </div>
 
         {/* Search Bar */}
-       
-          <div className="h-11  lg:mx-[10px] px-6 py-3 bg-[#efefef] hover:bg-[#dfdfdf] transition duration-300 rounded-full flex items-center justify-between flex-grow basis-0 leading-none">
-            <p className="text-[16px] text-[#767676]">what are you looking for?</p>
-            <RiSearchLine className="font-bold text-[20px] text-black" />
-          </div>
-       
+
+        <div className="h-11  lg:mx-[10px] px-6 py-3 bg-[#efefef] hover:bg-[#dfdfdf] transition duration-300 rounded-full flex items-center justify-between flex-grow basis-0 leading-none">
+          <p className="text-[16px] text-[#767676]">what are you looking for?</p>
+          <RiSearchLine className="font-bold text-[20px] text-black" />
+        </div>
+
 
         {/* Right Section */}
         <div className="flex items-center gap-2">
@@ -110,37 +116,57 @@ export function Menubar() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" >
-            <div className="grid w-[200px] p-4">
-              <Link
-                href="#"
-                className="text-lg font-medium hover:underline underline-offset-4"
-                prefetch={false}>
-                Home
-              </Link>
-              <Link
-                href="#"
-                className="text-lg font-medium hover:underline underline-offset-4"
-                prefetch={false}>
-                About
-              </Link>
-              <Link
-                href="#"
-                className="text-lg font-medium hover:underline underline-offset-4"
-                prefetch={false}>
-                Services
-              </Link>
-              <Link
-                href="#"
-                className="text-lg font-medium hover:underline underline-offset-4"
-                prefetch={false}>
-                Portfolio
-              </Link>
-              <Link
-                href="#"
-                className="text-lg font-medium hover:underline underline-offset-4"
-                prefetch={false}>
-                Contact
-              </Link>
+            <div className="h-full overflow-y-auto">
+
+              <div className="px-4 pt-10 ">
+                <p className="pb-4 font-bold text-black">my HEMA</p>
+                <div className="py-[22px] flex items-center gap-5 border-b-[1px]">
+                  <img src={head} className="h-5 w-5" alt="" />
+                  <p className="text-[#323232]">log in or register</p>
+                </div>
+                <div className="py-[22px] flex items-center gap-5 border-b-[1px]">
+                  <FaRegHeart className="h-5 w-5" />
+                  <p className="text-[#323232]">favorites</p>
+                </div>
+
+              </div>
+
+              <div className="pt-10 pb-[82px]">
+                <p className="pb-4 px-4 font-bold text-black">even more HEMA</p>
+
+                <div className="px-5">
+                  <div className="py-[22px]  flex items-center gap-5 border-b-[1px]">
+                    <MdOutlinePhotoCamera className="h-5 w-5" />
+                    <p className="text-[#323232]">photo service</p>
+                  </div>
+                  <div className="py-[22px]  flex items-center gap-5 border-b-[1px]">
+                    <HiOutlineTicket className="h-5 w-5" />
+                    <p className="text-[#323232]">tickets & deals</p>
+                  </div>
+                  <div className="py-[22px]  flex items-center gap-5 border-b-[1px]">
+                    <RiShoppingBag4Line className="h-5 w-5" />
+                    <p className="text-[#323232]">insurances</p>
+                  </div>
+                  <div className="py-[22px]  flex items-center gap-5 border-b-[1px]">
+                    <PiCoffee  className="h-5 w-5" />
+                    <p className="text-[#323232]">inspiration</p>
+                  </div>
+                  <div className="py-[22px]  flex items-center gap-5 border-b-[1px]">
+                    <IoLocationOutline  className="h-5 w-5" />
+                    <p className="text-[#323232]">shops</p>
+                  </div>
+                  <div className="py-[22px]  flex items-center gap-5 border-b-[1px]">
+                    <IoMdCard   className="h-5 w-5" />
+                    <p className="text-[#323232]">customer card</p>
+                  </div>
+                  <div className="py-[22px]  flex items-center gap-5 border-b-[1px]">
+                    <TfiHeadphoneAlt className="h-5 w-5" />
+                    <p className="text-[#323232]">customer service</p>
+                  </div>
+                </div>
+
+              </div>
+
             </div>
           </SheetContent>
         </Sheet>
