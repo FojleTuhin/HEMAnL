@@ -86,42 +86,45 @@ const CategoriesDropdown = () => {
                 onMouseEnter={() => setDropdownOpen(true)}
                 onMouseLeave={() => setDropdownOpen(false)}
             >
-                <div className="flex border-t-[1px]">
-                    {/* Main Categories */}
-                    <ul className="w-1/4 border-r-[1px]">
-                        <p className="font-bold px-12 py-5">Categories</p>
-                        {items.map((category) => (
-                            <li
-                                key={category.name}
-                                className="pl-12 py-4 hover:bg-gray-200 cursor-pointer"
-                                onMouseEnter={() => setHoveredCategory(category.name)} // Updated to store just the category name
-                                onMouseLeave={() => setHoveredCategory(null)}
-                            >
-                                <div className="group flex justify-between pr-5 w-full items-center">
-                                    <div className="flex gap-5 items-center">
-                                        <img className="w-10 h-10 rounded-full" src={category.image} alt="" />
-                                        <p>{category.name}</p>
+                <div className="px-12">
+                    <div className="flex border-t-[1px] overflow-y-auto max-h-screen">
+                        {/* Main Categories */}
+                        <ul className="w-1/4 border-r-[1px]">
+                            <p className="font-bold  py-5">Categories</p>
+                            {items.map((category) => (
+                                <li
+                                    key={category.name}
+                                    className=" py-4 hover:bg-gray-200 cursor-pointer"
+                                    onMouseEnter={() => setHoveredCategory(category.name)} // Updated to store just the category name
+                                    onMouseLeave={() => setHoveredCategory(null)}
+                                >
+                                    <div className="group flex justify-between pr-5 w-full items-center">
+                                        <div className="flex gap-5 items-center">
+                                            <img className="w-10 h-10 rounded-full" src={category.image} alt="" />
+                                            <p>{category.name}</p>
+                                        </div>
+                                        <MdNavigateNext className="hidden group-hover:block" />
                                     </div>
-                                    <MdNavigateNext className="hidden group-hover:block" />
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
+                                </li>
+                            ))}
+                        </ul>
 
-                    {/* Subcategories for hovered category */}
-                    <div className="w-1/4 border-r-[1px] bg-white py-5 px-6">
-                        {hoveredCategory && (
-                            <ul className="">
-                                {/* Find the hovered category and display its subcategories */}
-                                {items
-                                    .find((category) => category.name === hoveredCategory)
-                                    ?.subcategories.map((subcategory, index) => (
-                                        <li key={subcategory} className={`py-5 hover:bg-gray-100 ${index === 0 ? 'font-bold' : ''}`}>
-                                            {subcategory}
-                                        </li>
-                                    ))}
-                            </ul>
-                        )}
+                        {/* Subcategories for hovered category */}
+                        <div className="w-1/4 border-r-[1px] bg-white py-5 px-6">
+                            {hoveredCategory && (
+                                <ul className="">
+                                    {/* Find the hovered category and display its subcategories */}
+                                    {items
+                                        .find((category) => category.name === hoveredCategory)
+                                        ?.subcategories.map((subcategory, index) => (
+                                            <li key={subcategory} className={` hover:bg-gray-100 ${index === 0 ? 'font-bold pb-5' : ''} 
+                                        ${index !== 0 ? 'py-5 ' : ''}`}>
+                                                {subcategory}
+                                            </li>
+                                        ))}
+                                </ul>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
