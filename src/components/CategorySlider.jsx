@@ -1,8 +1,7 @@
 
-
-
 import { useEffect, useState, useRef } from "react";
 import Slider from "react-slick";
+
 
 const settings = {
     dots: true,
@@ -79,7 +78,7 @@ const CategorySlider = () => {
             {/* Previous Button */}
             {!isPrevDisabled && (
                 <button
-                    className="absolute left-0 top-1/3 transform -translate-y-1/3  p-2 rounded z-10"
+                    className="absolute -left-2 top-1/3 transform -translate-y-1/3  p-2 rounded z-10"
                     onClick={() => sliderRef.current.slickPrev()}
                 >
                     <div className="flex justify-center items-center  border-[#dfdfdf]">
@@ -123,7 +122,7 @@ const CategorySlider = () => {
             {/* Next Button */}
             {!isNextDisabled && (
                 <button
-                    className="absolute right-0 top-1/3 transform -translate-y-1/3  p-2 rounded z-10"
+                    className="absolute -right-2 top-1/3 transform -translate-y-1/3  p-2 rounded z-10"
                     onClick={() => sliderRef.current.slickNext()}
                 >
                     <div className="flex justify-center items-center  border-[#dfdfdf]">
